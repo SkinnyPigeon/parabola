@@ -31,3 +31,18 @@
 
 t = 4
 g = 9.8*t
+
+calc = Numeric.new
+
+
+h = calc.horizontal( 50, 60 )
+puts h
+
+v = calc.vertical( 50, 60 )
+puts v
+
+t = 4
+g = 9.8
+
+height = calc.vertical( 50, 60 ) * t - 0.5 * g * t**2
+puts height

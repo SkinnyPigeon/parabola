@@ -1,5 +1,11 @@
 class Numeric
 
+  attr_reader( :gravity )
+
+  def initialize
+    @gravity = 9.8
+  end
+
   def degrees
    self * Math::PI / 180
   end
@@ -14,26 +20,28 @@ class Numeric
     return answer.round(2)
   end
 
-  def angle_calc
+  def distance( speed, time )
+    answer = speed * time
+    return answer
+  end
+
+  def height()
 
   end
 
+  def angle_calc( horizontal, vertical )
+    fraction =  vertical / horizontal
+    # binding.pry
+    answer = Math::acos( fraction.degrees ) 
+    return answer
+  end
+
+
+
+
 end
 
-calc = Numeric.new
 
-
-h = calc.horizontal( 50, 60 )
-puts h
-
-v = calc.vertical( 50, 60 )
-puts v
-
-t = 4
-g = 9.8
-
-height = calc.vertical( 50, 60 ) * t - 0.5 * g * t**2
-puts height
 
 
 

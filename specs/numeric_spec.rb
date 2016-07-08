@@ -1,6 +1,7 @@
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('../conversion')
+require('pry-byebug')
 
 class TestConversion < MiniTest::Test
 
@@ -16,9 +17,15 @@ class TestConversion < MiniTest::Test
     assert_equal( 43.3, @calc.vertical( 50, 60 ))
   end
 
+  def test_distance
+    assert_equal( 25, @calc.distance( 25, 1 ))
+  end
+
   # def test_angle_calc
-  #   assert_equal( 60, )
+  #   assert_equal( 60, @calc.angle_calc(25, 43.3))
   # end
+
+
 
 
 end
