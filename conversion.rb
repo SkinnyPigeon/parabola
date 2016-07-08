@@ -6,15 +6,17 @@ class Numeric
 
   def horizontal( speed, angle)
     answer = speed * Math::cos( angle.degrees )
-    return answer
+    return answer.round(2)
   end
 
   def vertical( speed, angle )
     answer = speed * Math::sin( angle.degrees )
-    return answer
+    return answer.round(2)
   end
 
+  def angle_calc
 
+  end
 
 end
 
