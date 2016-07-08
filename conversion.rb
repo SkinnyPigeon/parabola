@@ -25,8 +25,8 @@ class Numeric
     return answer
   end
 
-  def height()
-
+  def height( speed, time )
+    answer = speed - ( time * @gravity )
   end
 
   def angle_calc( horizontal, vertical )

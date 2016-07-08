@@ -21,6 +21,10 @@ class TestConversion < MiniTest::Test
     assert_equal( 25, @calc.distance( 25, 1 ))
   end
 
+  def test_height
+    assert_equal( 33.5, @calc.height( 43.3, 1 ))
+  end
+
   # def test_angle_calc
   #   assert_equal( 60, @calc.angle_calc(25, 43.3))
   # end
