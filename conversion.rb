@@ -29,13 +29,24 @@ class Numeric
     answer = speed - ( time * @gravity )
   end
 
-  def angle_calc( horizontal, vertical )
-    fraction =  vertical / horizontal
+  def pythag( distance, height )
+    answer = Math.hypot( distance, height )
+    return answer.round(2)
+  end
+
+  def angle_calc_o_a( height , distance )
+    fraction =  height / distance
     # binding.pry
-    answer = Math::acos( fraction.degrees ) 
+    answer = Math::tan( fraction ) 
     return answer
   end
 
+  def angle_calc_o_s( height, distance )
+    hype =  pythag( height, distance )
+    fraction =  height / hype 
+    answer = Math::asin( fraction )
+    return answer * 180 / Math::PI
+  end
 
 
 
