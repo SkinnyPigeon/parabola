@@ -29,11 +29,14 @@ class TestConversion < MiniTest::Test
     assert_equal( 41.8, @calc.pythag( 25, 33.5 ))
   end
 
-  def test_angle_calc
+  def test_angle_calc_o_s
     # binding.pry
     assert_equal( 53.27, @calc.angle_calc_o_s( 33.5, 25 ))
   end
 
+  def test_angle_calc_o_a
+    assert_equal( 53.27, @calc.angle_calc_o_a( 33.5, 25))
+  end
 
 
 

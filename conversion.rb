@@ -36,12 +36,13 @@ require('pry-byebug')
     return answer.round(2)
   end
 
-  # def angle_calc_o_a( height , distance )
-  #   fraction =  height / distance
-  #   # binding.pry
-  #   answer = Math::tan( fraction ) 
-  #   return answer
-  # end
+  def angle_calc_o_a( height , distance )
+    fraction =  height / distance
+    # binding.pry
+    answer = Math::atan( fraction ) 
+    answer *= 180 / Math::PI
+    answer.round( 2 )
+  end
 
   def angle_calc_o_s( height, distance )
     hype =  pythag( height, distance )
