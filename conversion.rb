@@ -1,4 +1,6 @@
-class Numeric
+
+require('pry-byebug')
+  class Numeric
 
   attr_reader( :gravity )
 
@@ -34,18 +36,20 @@ class Numeric
     return answer.round(2)
   end
 
-  def angle_calc_o_a( height , distance )
-    fraction =  height / distance
-    # binding.pry
-    answer = Math::tan( fraction ) 
-    return answer
-  end
+  # def angle_calc_o_a( height , distance )
+  #   fraction =  height / distance
+  #   # binding.pry
+  #   answer = Math::tan( fraction ) 
+  #   return answer
+  # end
 
   def angle_calc_o_s( height, distance )
     hype =  pythag( height, distance )
     fraction =  height / hype 
     answer = Math::asin( fraction )
-    return answer * 180 / Math::PI
+    # binding.pry
+    answer *= 180 / Math::PI
+    answer.round( 2 )
   end
 
 

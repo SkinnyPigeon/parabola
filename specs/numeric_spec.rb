@@ -30,7 +30,8 @@ class TestConversion < MiniTest::Test
   end
 
   def test_angle_calc
-    assert_equal( 60, @calc.angle_calc_o_s( 33.5, 41.8 ))
+    # binding.pry
+    assert_equal( 53.27, @calc.angle_calc_o_s( 33.5, 25 ))
   end
 
 
